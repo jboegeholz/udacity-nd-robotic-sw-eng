@@ -1,8 +1,10 @@
 # udacity-nd-robotic-sw-eng
 
 ## Gazebo Project
+sudo apt-get update && sudo apt-get upgrade -y 
+gazebo
 
-Create the robot chassis
+## Create the robot chassis
 
 In the model editor, drop a box anywhere in the scene and double click it to change its position and dimension as follows: 
 
