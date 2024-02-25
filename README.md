@@ -1,7 +1,10 @@
 # udacity-nd-robotic-sw-eng
 
 ## Gazebo Project
-sudo apt-get update && sudo apt-get upgrade -y 
+brew install micromamba
+micromamba create -n ros_env -c conda-forge -c robostack-staging ros-noetic-desktop
+micromamba create -n ros_env -c conda-forge -c robostack-staging ros-noetic-desktop-full
+micromamba activate ros_env
 gazebo
 
 ## Create the robot chassis
