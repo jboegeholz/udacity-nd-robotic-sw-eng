@@ -90,7 +90,7 @@
     <state world_name='default'>
       <sim_time>1291 939000000</sim_time>
       <real_time>163 370789109</real_time>
-      <wall_time>1708867417 675491749</wall_time>
+      <wall_time>1708867657 29675156</wall_time>
       <iterations>161627</iterations>
       <model name='bookshelf'>
         <pose>2 0.584426 0 0 -0 0</pose>
@@ -113,28 +113,28 @@
         </link>
       </model>
       <model name='my_robot'>
-        <pose>4.4542 0.103636 0.01875 0 -0 0</pose>
+        <pose>4.81539 -0.722023 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_3'>
-          <pose>-3.8005 0.54163 0.5 0 -0 0</pose>
+          <pose>-3.43931 -0.284029 0.48125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='link_5'>
-          <pose>-3.8005 0.89163 0.5 0 -0 0</pose>
+          <pose>-3.43931 0.065971 0.48125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='link_6'>
-          <pose>-3.8005 0.71663 0.5 0 -0 0</pose>
+          <pose>-3.43931 -0.109029 0.48125 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='link_7'>
-          <pose>-3.8005 0.71663 0.575 0 -0 0</pose>
+          <pose>-3.43931 -0.109029 0.55625 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -1515,7 +1515,7 @@
     </model>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>-3.97977 -11.8031 14.5516 0 0.677794 1.58422</pose>
+        <pose>-0.643012 -0.781504 2.57247 0 0.649795 3.00022</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
