@@ -1,28 +1,18 @@
 # udacity-nd-robotic-sw-eng
 
-## Gazebo Project
-brew install micromamba
-micromamba create -n ros_env -c conda-forge -c robostack-staging ros-noetic-desktop
-micromamba create -n ros_env -c conda-forge -c robostack-staging ros-noetic-desktop-full
-micromamba activate ros_env
-gazebo
+## Project 1 - Gazebo World
 
-## Create the robot chassis
+for a working environment on my Apple Silicon Mac I used brew / mamba / Robostack:
 
-In the model editor, drop a box anywhere in the scene and double click it to change its position and dimension as follows: 
+    brew install micromamba
+    micromamba create -n ros_env -c conda-forge -c robostack-staging ros-noetic-desktop
+    micromamba create -n ros_env -c conda-forge -c robostack-staging ros-noetic-desktop-full
+    micromamba activate ros_env`
 
-Position: [X, Y, Z] = [0, 0, 0.2]
-Visual and Collision geometry: [X, Y, Z] = [0.3, 1.0, 0.1]
+Now we can start gazebo
+with
+    
+    gazebo
 
-
-Insert a cylinder inside the scene and then edit its position and orientation:
-
-Z pose = 0.2
-Roll = 1.5707 rad
-Visual and Collision geometry: [Radius, Length] = [0.2, 0.1]
-
-Link the two objects
-Joint axis -> z
-Align Links -> xAlign Center
-
-Copy the cylinder
+### My first Gazebo World
+![my-first-gazebo-world.png](Project1%2Fmy-first-gazebo-world.png)

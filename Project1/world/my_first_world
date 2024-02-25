@@ -88,10 +88,10 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
     <state world_name='default'>
-      <sim_time>1291 939000000</sim_time>
-      <real_time>163 370789109</real_time>
-      <wall_time>1708867657 29675156</wall_time>
-      <iterations>161627</iterations>
+      <sim_time>1304 367000000</sim_time>
+      <real_time>12 553915906</real_time>
+      <wall_time>1708868287 887726820</wall_time>
+      <iterations>12428</iterations>
       <model name='bookshelf'>
         <pose>2 0.584426 0 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -113,28 +113,28 @@
         </link>
       </model>
       <model name='my_robot'>
-        <pose>4.81539 -0.722023 0 0 -0 0</pose>
+        <pose>4.07192 -0.406856 0.01875 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_3'>
-          <pose>-3.43931 -0.284029 0.48125 0 -0 0</pose>
+          <pose>-4.18278 0.031138 0.5 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='link_5'>
-          <pose>-3.43931 0.065971 0.48125 0 -0 0</pose>
+          <pose>-4.18278 0.381138 0.5 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='link_6'>
-          <pose>-3.43931 -0.109029 0.48125 0 -0 0</pose>
+          <pose>-4.18278 0.206138 0.5 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
         <link name='link_7'>
-          <pose>-3.43931 -0.109029 0.55625 0 -0 0</pose>
+          <pose>-4.18278 0.206138 0.575 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -1515,7 +1515,7 @@
     </model>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>-0.643012 -0.781504 2.57247 0 0.649795 3.00022</pose>
+        <pose>-2.92842 -2.47814 5.48323 -0 1.1898 1.65622</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
@@ -1791,7 +1791,7 @@
           </inertia>
           <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose>-8.2547 0.437994 0.48125 0 -0 0</pose>
+        <pose>-8.2547 0.437994 0.48125 -0 -0 -0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
@@ -1891,7 +1891,7 @@
           </inertia>
           <pose>0 0 0 1.5707 -0 0</pose>
         </inertial>
-        <pose>-8.2547 0.787994 0.48125 0 -0 0</pose>
+        <pose>-8.2547 0.787994 0.48125 -0 -0 -0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
@@ -1991,7 +1991,7 @@
           </inertia>
           <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose>-8.2547 0.612994 0.48125 0 -0 0</pose>
+        <pose>-8.2547 0.612994 0.48125 -0 -0 -0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
@@ -2089,7 +2089,7 @@
           </inertia>
           <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose>-8.2547 0.612994 0.55625 0 -0 0</pose>
+        <pose>-8.2547 0.612994 0.55625 -0 -0 -0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
@@ -2192,6 +2192,7 @@
             <spring_reference>0</spring_reference>
             <spring_stiffness>0</spring_stiffness>
             <damping>0</damping>
+            <friction>0</friction>
           </dynamics>
         </axis>
         <physics>
@@ -2223,6 +2224,7 @@
             <spring_reference>0</spring_reference>
             <spring_stiffness>0</spring_stiffness>
             <damping>0</damping>
+            <friction>0</friction>
           </dynamics>
         </axis>
         <physics>
@@ -2238,24 +2240,10 @@
           </ode>
         </physics>
       </joint>
-      <joint name='link_6_JOINT_6' type='screw'>
+      <joint name='link_6_JOINT_6' type='fixed'>
         <parent>link_6</parent>
         <child>link_7</child>
         <pose>0 0 0 0 -0 0</pose>
-        <axis>
-          <xyz>0 0 1</xyz>
-          <limit>
-            <lower>-1.79769e+308</lower>
-            <upper>1.79769e+308</upper>
-            <effort>-1</effort>
-            <velocity>-1</velocity>
-          </limit>
-          <dynamics>
-            <spring_reference>0</spring_reference>
-            <spring_stiffness>0</spring_stiffness>
-            <damping>0</damping>
-          </dynamics>
-        </axis>
         <physics>
           <ode>
             <limit>
@@ -2268,11 +2256,10 @@
             </suspension>
           </ode>
         </physics>
-        <thread_pitch>1</thread_pitch>
       </joint>
       <static>0</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose>0.013333 0.13833 0.01875 0 -0 0</pose>
+      <pose>4.8493 -0.502363 -0.153967 0.001419 -0.027586 0.026467</pose>
     </model>
   </world>
 </sdf>
