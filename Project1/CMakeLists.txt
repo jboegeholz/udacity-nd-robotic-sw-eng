@@ -1,5 +1,4 @@
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
-list(APPEND CMAKE_MODULE_PATH "/pfad/zu/deinem/gazebo/cmake")
 
 find_package(gazebo REQUIRED)
 include_directories(${GAZEBO_INCLUDE_DIRS})

@@ -7,7 +7,7 @@ namespace gazebo
   {
     public: WorldPluginMyRobot() : WorldPlugin()
             {
-              std::cout << "Hello Gazebo World!" << std::endl;
+              std::cout << "Welcome to Joern’s World!" << std::endl;
             }
 
     public: void Load(physics::WorldPtr _world, sdf::ElementPtr _sdf)
