@@ -16,3 +16,12 @@ with
 
 ### My first Gazebo World
 ![my-first-gazebo-world.png](Project1%2Fmy-first-gazebo-world.png)
+
+### Build Plugin
+
+    micromamba activate ros_env
+    cd build/
+    cmake ../
+    make
+    
+Copy dylib into world dir!
