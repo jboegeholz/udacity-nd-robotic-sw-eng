@@ -1,2 +1,4 @@
 .idea
 Project1/build
+/Project2/catkin_ws/build/
+/Project2/catkin_ws/devel/
