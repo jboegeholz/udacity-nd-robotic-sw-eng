@@ -106,13 +106,14 @@
         <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
       </inertial>
     </link>
-  <joint type="continuous" name="left_wheel_hinge">
+    <joint type="continuous" name="left_wheel_hinge">
     <origin xyz="0 0.15 0" rpy="0 0 0"/>
     <child link="left_wheel"/>
     <parent link="chassis"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
     <limit effort="10000" velocity="1000"/>
     <dynamics damping="1.0" friction="1.0"/>
+    </joint>
     <joint type="continuous" name="right_wheel_hinge">
       <origin xyz="0 -0.15 0" rpy="0 0 0"/>
       <parent link="chassis"/>
