@@ -32,7 +32,6 @@
       <origin xyz="0 0 0" rpy=" 0 0 0"/>
       <geometry>
         <box size=".4 .2 .1"/>
-        <mesh filename="package://pr2_description/meshes/base_v0/base.dae"/>
       </geometry>
       <material name="red">
         <color rgba="1 0 0 1"/>
@@ -126,4 +125,13 @@
       <limit effort="10000" velocity="1000"/>
       <dynamics damping="1.0" friction="1.0"/>
     </joint>
+    <gazebo reference="left_wheel">
+      <material>Gazebo/Yellow</material>
+    </gazebo>
+    <gazebo reference="right_wheel">
+      <material>Gazebo/Yellow</material>
+    </gazebo>
+    <gazebo reference="chassis">
+      <material>Gazebo/Green</material>
+    </gazebo>
 </robot>
