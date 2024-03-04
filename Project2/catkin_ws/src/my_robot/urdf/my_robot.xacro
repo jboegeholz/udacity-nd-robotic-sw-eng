@@ -192,4 +192,10 @@
     <gazebo reference="chassis">
         <material>Gazebo/Green</material>
     </gazebo>
+    <gazebo reference="hokuyo">
+        <material>Gazebo/Red</material>
+    </gazebo>
+        <gazebo reference="camera">
+        <material>Gazebo/Blue</material>
+    </gazebo>
 </robot>
