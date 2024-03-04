@@ -18,3 +18,13 @@
 ## Fehler "SpawnModel: Failure - model name my_robot already exist."
 
     rosservice call /gazebo/delete_model "{model_name: 'my_robot'}"
+
+## RViz
+    
+Terminal 1
+
+    roscore
+
+Terminal 2
+
+    rosrun rviz rviz
