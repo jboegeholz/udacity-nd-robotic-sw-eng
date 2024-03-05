@@ -1,8 +1,0 @@
-prefix=/home/jobo8505/udacity-nd-robotic-sw-eng/Project2/catkin_ws/devel
-
-Name: my_robot
-Description: Description of my_robot
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
