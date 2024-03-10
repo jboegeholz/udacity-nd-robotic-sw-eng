@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <sdf version='1.7'>
-  <model name='our_house'>
+  <model name='my_house'>
     <pose>-0.073859 2.59663 0 0 -0 0</pose>
     <link name='Stairs_0'>
       <visual name='Stairs_0_Visual_0'>
