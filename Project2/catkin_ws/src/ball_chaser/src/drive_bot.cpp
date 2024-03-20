@@ -11,8 +11,8 @@ ros::Publisher motor_command_publisher;
 bool handle_drive_request(ball_chaser::DriveToTarget::Request& request, ball_chaser::DriveToTarget::Response& response)
 {
     ROS_INFO("Handle DriveToTarget Request");
-    ROS_INFO((float)request.linear_x);
-    ROS_INFO((float)request.angular_z);
+    ROS_INFO_STREAM(request.linear_x);
+    ROS_INFO_STREAM(request.angular_z);
     geometry_msgs::Twist motor_command;
     motor_command.linear.x = request.linear_x;
     motor_command.angular.z = request.angular_z;
