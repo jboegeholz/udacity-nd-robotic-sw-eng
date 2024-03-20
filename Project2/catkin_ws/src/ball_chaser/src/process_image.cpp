@@ -14,13 +14,20 @@ void drive_robot(float lin_x, float ang_z)
 // This callback function continuously executes and reads the image data
 void process_image_callback(const sensor_msgs::Image img)
 {
-    ROS_INFO("Received image with encoding: ");
-    ROS_INFO_STREAM(img.encoding);
+    //ROS_INFO("Received image with encoding: ");
+    //ROS_INFO_STREAM(img.encoding);
     int white_pixel = 255;
     // Loop through each pixel in the image and check if one is white
-    for (int i = 0; i < img.height * img.step; i++) {
-        //
+    for (int i = 0; i < img.height * img.step - 2; i++) {
+        // if found white pixel break loop and determine sector
+        uint8_t red = img.data[i];
+        uint8_t green = img.data[i + 1];
+        uint8_t blue = img.data[i + 2]; 
+        if(red == 255 && green == 255 && blue == 255){
+            ROS_INFO("Found white pixel!");
+        }
     }
+    // send drive request reagrding sector
 
 }
 
