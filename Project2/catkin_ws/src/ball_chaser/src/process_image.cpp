@@ -8,7 +8,12 @@ ros::ServiceClient client;
 // This function calls the command_robot service to drive the robot in the specified direction
 void drive_robot(float lin_x, float ang_z)
 {
-    // TODO: Request a service and pass the velocities to it to drive the robot
+    
+    ball_chaser::DriveToTarget service;
+    service.request.angular_z = ang_z;
+    service.request.linear_x = lin_x;
+    client.call(service);
+
 }
 
 // This callback function continuously executes and reads the image data
@@ -32,19 +37,29 @@ void process_image_callback(const sensor_msgs::Image img)
             break;
         }
     }
-    int white_pixel_x_coordinate = white_pixel_index / 3 % img.width;
+    if(white_pixel_index != -1){
+        int white_pixel_x_coordinate = white_pixel_index / 3 % img.width;
 
-    // send drive request reagrding sector
-    ROS_INFO_STREAM("found white pixel at x-coordinate:" << white_pixel_x_coordinate);
-    if (white_pixel_x_coordinate < img.width / 3){
-        ROS_INFO("Found on the left");
-    } else if(white_pixel_x_coordinate > img.width / 3 && white_pixel_x_coordinate < 2 * img.width / 3){
-        ROS_INFO("Found in the middle");
-    } else if(white_pixel_x_coordinate > 2 * img.width / 3){
-        ROS_INFO("Found on the right");
+        // send drive request reagrding sector
+        ROS_INFO_STREAM("found white pixel at x-coordinate:" << white_pixel_x_coordinate);
+        if (white_pixel_x_coordinate < img.width / 3){
+            ROS_INFO("Found on the left -> drive left");
+            drive_robot(0.1,0.1);
+        } else if(white_pixel_x_coordinate > img.width / 3 && white_pixel_x_coordinate < 2 * img.width / 3){
+            ROS_INFO("Found in the middle -> drive straight ahead!");
+            drive_robot(0.1, 0.0);
+        } else if(white_pixel_x_coordinate > 2 * img.width / 3){
+            ROS_INFO("Found on the right -> drive to the right");
+            drive_robot(0.1,-0.1);
+        } else {
+            ROS_INFO("No white pixel found! -> stop!");
+            drive_robot(0.0, 0.0);
+
+        }
     } else {
-        ROS_INFO("No white pixel found!");
+        drive_robot(0.0, 0.0);
     }
+
     
 
 }
