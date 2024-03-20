@@ -14,20 +14,38 @@ void drive_robot(float lin_x, float ang_z)
 // This callback function continuously executes and reads the image data
 void process_image_callback(const sensor_msgs::Image img)
 {
-    //ROS_INFO("Received image with encoding: ");
-    //ROS_INFO_STREAM(img.encoding);
-    int white_pixel = 255;
+
+    ROS_INFO_STREAM("Received image with encoding: " << img.encoding);
+    ROS_INFO_STREAM("Image height: " << img.height);
+    ROS_INFO_STREAM("Image width: " << img.width);  
+    ROS_INFO_STREAM("Image step: " << img.step);  
+    int white_pixel_index = -1;
     // Loop through each pixel in the image and check if one is white
-    for (int i = 0; i < img.height * img.step - 2; i++) {
+    for (int i = 0; i < img.height * img.step - 2; i+=3) {
         // if found white pixel break loop and determine sector
         uint8_t red = img.data[i];
         uint8_t green = img.data[i + 1];
         uint8_t blue = img.data[i + 2]; 
         if(red == 255 && green == 255 && blue == 255){
-            ROS_INFO("Found white pixel!");
+            ROS_INFO_STREAM("found white pixel at index:" << i);
+            white_pixel_index = i;
+            break;
         }
     }
+    int white_pixel_x_coordinate = white_pixel_index / 3 % img.width;
+
     // send drive request reagrding sector
+    ROS_INFO_STREAM("found white pixel at x-coordinate:" << white_pixel_x_coordinate);
+    if (white_pixel_x_coordinate < img.width / 3){
+        ROS_INFO("Found on the left");
+    } else if(white_pixel_x_coordinate > img.width / 3 && white_pixel_x_coordinate < 2 * img.width / 3){
+        ROS_INFO("Found in the middle");
+    } else if(white_pixel_x_coordinate > 2 * img.width / 3){
+        ROS_INFO("Found on the right");
+    } else {
+        ROS_INFO("No white pixel found!");
+    }
+    
 
 }
 
