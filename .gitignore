@@ -4,4 +4,8 @@ Project1/build
 /Project2/catkin_ws/devel/
 /Project2/catkin_ws/logs
 /Project2/catkin_ws/.catkin_tools
+/Project3/catkin_ws/build/
+/Project3/catkin_ws/devel/
+/Project3/catkin_ws/logs
+/Project3/catkin_ws/.catkin_tools
 .vscode/
