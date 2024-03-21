@@ -5,26 +5,12 @@
     source devel/setup.bash
     roslaunch my_robot world.launch
 
-## C++17
 
-    set(CMAKE_CXX_STANDARD 17)
-    set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-## URDF checken
 
-    sudo apt install liburdfdom-tools
-    check_urdf my_robot.xacro
+## Launch World
 
-## Fehler "SpawnModel: Failure - model name my_robot already exist."
+    source devel/setup.bash
+    roslaunch my_robot world.launch
 
-    rosservice call /gazebo/delete_model "{model_name: 'my_robot'}"
-
-## RViz
-    
-Terminal 1
-
-    roscore
-
-Terminal 2
-
-    rosrun rviz rviz
+    roslaunch ball_chaser ball_chaser.launch
