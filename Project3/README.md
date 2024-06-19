@@ -17,7 +17,7 @@
     cd ..
     catkin build
 
-## Setup
+## Create map from Gazebo World
 
 cp <YOUR GAZEBO WORLD FILE> src/pgm_map_creator/world/<YOUR GAZEBO WORLD FILE>
 
@@ -29,7 +29,16 @@ gzserver src/pgm_map_creator/world/my_house.world
 2. Terminal
 roslaunch pgm_map_creator request_publisher.launch
 
-## AMCL
+## Test AMCL
+1. Terminal
 
-rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+    roslaunch my_robot world.launch
+
+2. Terminal
+
+    roslaunch my_robot amcl.launch
+
+3. Terminal
+
+    rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 
