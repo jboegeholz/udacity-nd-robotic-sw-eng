@@ -29,3 +29,7 @@ gzserver src/pgm_map_creator/world/my_house.world
 2. Terminal
 roslaunch pgm_map_creator request_publisher.launch
 
+## AMCL
+
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+
