@@ -1,5 +1,9 @@
 # Where am I?
 
+![where-am-i-amcl.png](where-am-i-amcl.png)
+
+https://youtu.be/Syc6DdwOAj0?si=BWGqi8-4veT8e_jY
+
 ## Prerequisites
 
     sudo sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
