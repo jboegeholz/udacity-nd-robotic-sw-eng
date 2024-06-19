@@ -9,6 +9,7 @@
     sudo apt-get install libignition-math2-dev protobuf-compiler
 
 
+## Install pgm_map_creator
 
     cd /home/workspace/catkin_ws/src/
     git clone https://github.com/ismailkoch492/pgm_map_creator.git
