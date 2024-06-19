@@ -13,3 +13,19 @@
 
     cd /home/workspace/catkin_ws/src/
     git clone https://github.com/ismailkoch492/pgm_map_creator.git
+
+    cd ..
+    catkin build
+
+## Setup
+
+cp <YOUR GAZEBO WORLD FILE> src/pgm_map_creator/world/<YOUR GAZEBO WORLD FILE>
+
+add <plugin filename="libcollision_map_creator.so" name="collision_map_creator"/> before </world>
+
+1. Terminal
+gzserver src/pgm_map_creator/world/my_house.world 
+
+2. Terminal
+roslaunch pgm_map_creator request_publisher.launch
+
