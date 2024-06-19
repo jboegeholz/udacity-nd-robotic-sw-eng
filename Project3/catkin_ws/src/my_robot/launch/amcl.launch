@@ -6,6 +6,10 @@
 
   <!-- AMCL Node -->
   <node name="amcl" pkg="amcl" type="amcl" output="screen">
+    <param name="min_particles" value="25"/>
+    <param name="max_particles" value="5000"/>
+    <param name="update_min_a" value="0.05"/>
+    <param name="update_min_d" value="0.0314"/>
     <param name="odom_frame_id" value="odom"/>
     <param name="odom_model_type" value="diff-corrected"/>
     <param name="base_frame_id" value="robot_footprint"/>
