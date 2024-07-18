@@ -8,4 +8,8 @@ project1-gazebo-world/build
 /project3-where-am-i/catkin_ws/devel/
 /project3-where-am-i/catkin_ws/logs
 /project3-where-am-i/catkin_ws/.catkin_tools
+/project4-map-my-world/catkin_ws/build/
+/project4-map-my-world/catkin_ws/devel/
+/project4-map-my-world/catkin_ws/logs
+/project4-map-my-world/catkin_ws/.catkin_tools
 .vscode/
